@@ -1,0 +1,49 @@
+<html lang="en">
+
+  <head>
+
+    <title>This is a great website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+  <button id="theButton">Hello</button>
+
+ <script>
+
+function construcTimeoutPromise(){
+  return new Promise(function(resolve, reject){
+    setTimeout(resolve,2000);
+
+    //connect to DB
+  })
+}
+construcTimeoutPromise().then(function(){
+  console.log("connectiong to database");
+  return construcTimeoutPromise();
+}).then(function(){
+  console.log("reading from database");
+  return construcTimeoutPromise();
+}).then(function(){
+    console.log("structering data");
+    return construcTimeoutPromise();
+  }).then(function(){
+      console.log("initiating send transaction");
+      return construcTimeoutPromise();
+    }).then(function(){
+      console.log("sent data");
+
+      })
+
+
+ </script>
+
+
+
+
+
+  </body>
+
+
+</html>

@@ -1,0 +1,14 @@
+var phonebook = {
+Carlos: 22334455,
+Gabba: 95959595,
+Ivo: 97959795,
+Taha: 12345678
+}
+var name = prompt("Enter a name:");
+if (name in phonebook) {
+let numb = phonebook[name];
+console.log("The phone number to" + name + "is" + numb);
+}
+else {
+console.log("We have not stored the number to" + name);
+}

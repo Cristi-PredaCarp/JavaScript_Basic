@@ -1,0 +1,42 @@
+var hello="hello";
+undefined
+console.log(hello);
+VM151:1 hello
+undefined
+var world="world";
+undefined
+console.log(hello + world);
+VM285:1 helloworld
+undefined
+console.log(hello +""+ world);
+VM299:1 helloworld
+undefined
+console.log(hello +" "+ world);
+VM306:1 hello world
+undefined
+console.log(hello +" "+ world+ "and everyone");
+VM334:1 hello worldand everyone
+undefined
+console.log(hello +" "+ world+" "+ "and everyone");
+VM352:1 hello world and everyone
+undefined
+alert(hello +" "+ world+" "+ "and everyone");
+undefined
+-------------------------------------------------------
+var number1=3;
+undefined
+var number2=2;
+undefined
+alert(number1+number2);
+undefined
+console.log(hello);
+VM560:1 hello
+undefined
+console.log(hello+number1);
+VM647:1 hello3
+undefined
+------------------------------------------------------
+var isRaining=true;
+undefined
+isRaining
+true

@@ -1,0 +1,52 @@
+<html lang="en">
+
+  <head>
+
+    <title>This is a great website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+<h1>My favorite fruits</h1>
+
+
+<ol id="fruitlist">
+
+</ol>
+
+<input id="textfruitinput" placeholder="Write fruit" type="text"/>
+<button id="addFruitButton"> Add fruit</button>
+
+ <script>
+ var fruits =["apple", "orange","bananas"];
+ function redrawList(){
+   var list=$("#fruitlist");
+   list.html("");
+   $.each(fruits,function(index,value){
+     //console.log(index,value);
+     var listItem=$("<li/>").text(value).appendTo(list);
+   });
+ }
+redrawList();
+
+$("#addFruitButton").click(function(){
+  var fruitText=$("#textfruitinput").val();
+  fruits.push(fruitText);
+  console.log(fruits);
+
+  redrawList();
+})
+
+
+
+ </script>
+
+
+
+
+
+  </body>
+
+
+</html>

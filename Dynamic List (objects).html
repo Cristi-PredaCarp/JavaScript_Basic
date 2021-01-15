@@ -1,0 +1,63 @@
+<html lang="en">
+
+  <head>
+
+    <title>This is a great website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+<h1>My favorite fruits</h1>
+
+
+<ol id="fruitlist">
+
+</ol>
+
+<input id="fruitNameInput" placeholder="Write fruit name" type="text" />
+<input id="fruitWeightInput" placeholder="Write fruit weight" type="text" />
+<input id="fruitColorInput" placeholder="Write fruit color" type="text" />
+<button id="addFruitButton"> Add fruit</button>
+
+ <script>
+// var fruits =["apple", "orange","bananas"];
+var fruits=[{name:"apple",color:"green",weight:10},
+{name:"orange",color:"orange",weight:20},
+{name:"banana",color:"yellow",weight:15}]
+
+ function redrawList(){
+   var list=$("#fruitlist");
+   list.html("");
+   $.each(fruits,function(index,value){
+     //console.log(index,value);
+     var listItem=$("<li/>").text("Fruit name: "+value.name+" Fruit color: "+value.weight).appendTo(list);
+   });
+ }
+redrawList();
+
+$("#addFruitButton").click(function(){
+  var fruitName= $("#fruitNameInput").val();
+  var fruitWeight= $("#fruitWeightInput").val();
+  var fruitColor= $("#fruitColorInput").val();
+
+var fruitObject={name:fruitName, color:fruitColor, weight:parseInt(fruitWeight)};
+
+  fruits.push(fruitObject);
+  console.log(fruits);
+
+  redrawList();
+})
+
+
+
+ </script>
+
+
+
+
+
+  </body>
+
+
+</html>

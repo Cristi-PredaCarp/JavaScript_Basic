@@ -1,0 +1,45 @@
+<html lang="en">
+
+  <head>
+
+    <title>Great website</title>
+
+
+
+  </head>
+
+  <body>
+
+
+
+    <script>
+
+       //multiplication
+       //4*4=4+4+4+4
+
+
+       function add(x,y){
+        return x+y;
+       }
+       function multiplication(a,b){
+         var toReturn=0;
+         //toReturn+a+a+a......(b times)
+
+         for(var counter=0;counter<b;counter++){
+           toReturn = add(toReturn,a);
+         }
+         return toReturn;
+       }
+
+
+      var answer = multiplication(5,9);
+      alert(answer);
+
+    </script>
+
+  </body>
+
+
+
+
+</html>
